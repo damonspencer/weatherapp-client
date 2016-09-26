@@ -8,11 +8,11 @@ h1 {
 }
 
 /* View: weathertypes list */
-.weathertypess {
+.weathertypes {
   list-style: none;
 }
 
-.weathertypess li {
+.weathertypes li {
   clear: both;
   height: 115px;
   padding-top: 15px;

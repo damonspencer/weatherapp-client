@@ -15,7 +15,7 @@ describe('weathertypesDetail', function() {
 
     beforeEach(inject(function($componentController, _$httpBackend_, $routeParams) {
       $httpBackend = _$httpBackend_;
-      $httpBackend.expectGET('weathertypess/xyz.json').respond(xyzweathertypesData);
+      $httpBackend.expectGET('weathertypes/xyz.json').respond(xyzweathertypesData);
 
       $routeParams.weathertypesId = 'xyz';
 

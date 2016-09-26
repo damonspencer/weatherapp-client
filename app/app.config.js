@@ -7,12 +7,12 @@ angular.
       $locationProvider.hashPrefix('!');
 
       $routeProvider.
-        when('/weathertypess', {
+        when('/weathertypes', {
           template: '<weathertypes-list></weathertypes-list>'
         }).
-        when('/weathertypess/:weathertypesId', {
+        when('/weathertypes/:weathertypesId', {
           template: '<weathertypes-detail></weathertypes-detail>'
         }).
-        otherwise('/weathertypess');
+        otherwise('/weathertypes');
     }
   ]);

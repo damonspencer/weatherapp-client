@@ -20,13 +20,13 @@
     <div class="col-md-10">
       <!--Body content-->
 
-      <ul class="weathertypess">
-        <li ng-repeat="weathertypes in $ctrl.weathertypess | filter:$ctrl.query | orderBy:$ctrl.orderProp"
+      <ul class="weathertypes">
+        <li ng-repeat="weathertypes in $ctrl.weathertypes | filter:$ctrl.query | orderBy:$ctrl.orderProp"
             class="thumbnail weathertypes-list-item">
-          <a href="#!/weathertypess/{{weathertypes.id}}" class="thumb">
+          <a href="#!/weathertypes/{{weathertypes.id}}" class="thumb">
             <img ng-src="{{weathertypes.imageUrl}}" alt="{{weathertypes.name}}" />
           </a>
-          <a href="#!/weathertypess/{{weathertypes.id}}">{{weathertypes.name}}</a>
+          <a href="#!/weathertypes/{{weathertypes.id}}">{{weathertypes.name}}</a>
           <p>{{weathertypes.snippet}}</p>
         </li>
       </ul>

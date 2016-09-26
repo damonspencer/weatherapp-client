@@ -11,19 +11,19 @@ describe('weathertypesList', function() {
 
     beforeEach(inject(function($componentController, _$httpBackend_) {
       $httpBackend = _$httpBackend_;
-      $httpBackend.expectGET('weathertypess/weathertypess.json')
+      $httpBackend.expectGET('weathertypes/weathertypes.json')
                   .respond([{name: 'Nexus S'}, {name: 'Motorola DROID'}]);
 
       ctrl = $componentController('weathertypesList');
     }));
 
-    it('should create a `weathertypess` property with 2 weathertypess fetched with `$http`', function() {
+    it('should create a `weathertypes` property with 2 weathertypes fetched with `$http`', function() {
       jasmine.addCustomEqualityTester(angular.equals);
 
-      expect(ctrl.weathertypess).toEqual([]);
+      expect(ctrl.weathertypes).toEqual([]);
 
       $httpBackend.flush();
-      expect(ctrl.weathertypess).toEqual([{name: 'Nexus S'}, {name: 'Motorola DROID'}]);
+      expect(ctrl.weathertypes).toEqual([{name: 'Nexus S'}, {name: 'Motorola DROID'}]);
     });
 
     it('should set a default value for the `orderProp` property', function() {

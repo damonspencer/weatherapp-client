@@ -3,7 +3,7 @@
 describe('weathertypes', function() {
   var $httpBackend;
   var weathertypes;
-  var weathertypessData = [
+  var weathertypesData = [
     {name: 'weathertypes X'},
     {name: 'weathertypes Y'},
     {name: 'weathertypes Z'}
@@ -20,7 +20,7 @@ describe('weathertypes', function() {
   // Instantiate the service and "train" `$httpBackend` before each test
   beforeEach(inject(function(_$httpBackend_, _weathertypes_) {
     $httpBackend = _$httpBackend_;
-    $httpBackend.expectGET('weathertypess/weathertypess.json').respond(weathertypessData);
+    $httpBackend.expectGET('weathertypes/weathertypes.json').respond(weathertypesData);
 
     weathertypes = _weathertypes_;
   }));
@@ -31,13 +31,13 @@ describe('weathertypes', function() {
     $httpBackend.verifyNoOutstandingRequest();
   });
 
-  it('should fetch the weathertypess data from `/weathertypess/weathertypess.json`', function() {
-    var weathertypess = weathertypes.query();
+  it('should fetch the weathertypes data from `/weathertypes/weathertypes.json`', function() {
+    var weathertypes = weathertypes.query();
 
-    expect(weathertypess).toEqual([]);
+    expect(weathertypes).toEqual([]);
 
     $httpBackend.flush();
-    expect(weathertypess).toEqual(weathertypessData);
+    expect(weathertypes).toEqual(weathertypesData);
   });
 
 });

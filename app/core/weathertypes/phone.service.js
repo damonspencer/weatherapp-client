@@ -4,10 +4,10 @@ angular.
   module('core.weathertypes').
   factory('weathertypes', ['$resource',
     function($resource) {
-      return $resource('weathertypess/:weathertypesId.json', {}, {
+      return $resource('weathertypes/:weathertypesId.json', {}, {
         query: {
           method: 'GET',
-          params: {weathertypesId: 'weathertypess'},
+          params: {weathertypesId: 'weathertypes'},
           isArray: true
         }
       });

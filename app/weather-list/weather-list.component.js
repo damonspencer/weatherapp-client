@@ -7,7 +7,7 @@ angular.
     templateUrl: 'weathertypes-list/weathertypes-list.template.html',
     controller: ['weathertypes',
       function weathertypesListController(weathertypes) {
-        this.weathertypess = weathertypes.query();
+        this.weathertypes = weathertypes.query();
         this.orderProp = 'age';
       }
     ]

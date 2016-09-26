@@ -7,11 +7,11 @@ angular.module('weatherclientApp', [
   'core',
   'weathertypesDetail',
   'weathertypesList',
-]);
-angular.module('myApp', [
   'btford.socket-io',
-  'myApp.MyCtrl'
+  'weatherclientApp.socketcontroller' //I'll add anything else I need later
 ]).
 factory('mySocket', function (socketFactory) {
-  return socketFactory();
+  var mySocket = socketFactory();
+   mySocket.forward('error');
+   return mySocket;
 });
